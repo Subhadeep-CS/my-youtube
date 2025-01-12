@@ -1,11 +1,17 @@
 import { AlignJustify, CircleUserRound } from "lucide-react";
 import Logo from "../assets/images/youtube_logo.png";
+import { toggleSideBarMenu } from "../redux/slices/globalSlice";
+import { useDispatch } from "react-redux";
 const Header: React.FC = () => {
+  const dispatch = useDispatch();
+  const toggleMenu = () => {
+    dispatch(toggleSideBarMenu());
+  };
   return (
     <div className="grid grid-flow-col p-2 shadow-lg items-center">
       <div className="col-span-1 flex justify-center items-center">
-        <AlignJustify />
-        <img src={Logo} alt="youtube-logo" className="h-14" />
+        <AlignJustify className="cursor-pointer" onClick={toggleMenu} />
+        <img src={Logo} alt="youtube-logo" className="h-14 cursor-pointer" />
       </div>
       <div className="col-span-10 text-center">
         <input
