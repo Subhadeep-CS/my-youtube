@@ -1,6 +1,6 @@
 const Sidebar: React.FC = () => {
   return (
-    <div className="w-full shadow-lg col-span-1">
+    <div className="w-full shadow-lg col-span-2">
       <ul>
         <li>Home</li>
         <li>Shorts</li>

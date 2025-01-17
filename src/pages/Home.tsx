@@ -7,7 +7,7 @@ const Home: React.FC = () => {
     (state: RootState) => state.global.isSideBarOpen
   );
   return (
-    <div className="grid grid-flow-col">
+    <div className="w-full grid grid-flow-col">
       {isSideBarOpen && <Sidebar />}
       <MainContainer />
     </div>
