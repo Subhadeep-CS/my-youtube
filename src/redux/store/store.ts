@@ -1,10 +1,12 @@
 // store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import globalSlice from '../slices/globalSlice';
+import searchSlice from '../slices/searchSlice';
 
 const store = configureStore({
   reducer: {
     global: globalSlice,
+    search:searchSlice,
   },
 });
 
